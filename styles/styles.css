@@ -19,6 +19,7 @@ h1 {
 }
 
 .page-header {
+    z-index: 100;
     position: fixed;
     top: 0;
     left: 0;
@@ -117,6 +118,10 @@ h1 {
     padding: 140px 0 150px;
 }
 
+.event{
+    padding: 40px 0 150px;
+}
+
 .event-card{
     display: flex;
     width: 405px;
@@ -187,6 +192,7 @@ h1 {
 .listing__event-card{
     width: calc(33.333% - 40px);
 }
+
 
 .about__block2{
     display: grid;
@@ -305,4 +311,35 @@ h1 {
     max-width: 1334px;
     margin: 0 auto 100px;
     padding: 0 20px;
+}
+
+.reserve{
+    display: grid;
+    grid-template-columns: 405px 1fr;
+    grid-template-columns: 405px calc(89% - 405px);
+    gap: 65px 11%;
+    grid-template-areas: 
+       "checks scheme"
+       "order legend";
+    width: 100%;
+}
+
+.reserve__checks{
+    grid-area: checks;
+    background-color: yellow;
+}
+
+.reserve__scheme{
+    grid-area: scheme;
+    background-color: orange;
+}
+
+.reserve__order{
+    grid-area: order;
+    background-color: purple;
+}
+
+.reserve__legend{
+    grid-area: legend;
+    background-color: rgb(226, 60, 176);
 }
