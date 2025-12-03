@@ -1,35 +1,8 @@
 <!DOCTYPE html> 
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Lenni Art</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap" 
-      rel="stylesheet">
-    <link rel="stylesheet" href="styles/styles.css">
-  </head>
+  @@include('blocks/head.html')
   <body class="body">
-    <header class="page-header">
-        <div class="page-header__container">
-            <a href="#" class="page-header__logo">
-                <img 
-                  src="./assets/images/logo.svg" 
-                  class="page-header__logo-icon" 
-                  alt="logo"
-                />
-            </a>
-            <nav class="page-header__nav"> 
-                <a class="page-header__nav-link" href="#">Мероприятия</a>
-                <a class="page-header__nav-link" href="#">Блог</a>
-                <a class="page-header__nav-link" href="#">О нас</a>
-                <a class="page-header__nav-link" href="#">Контакты</a>
-            </nav>
-            <div class="page-header__right-block">
-                <a href="#" class="page-header__btn btn"> Войти </a>
-            </div>    
-        </div>
-    </header> 
+    @@include('blocks/page-header.html')
     <main class="main">
         <div class="events">
              <section class="listing events__listing">
@@ -157,7 +130,8 @@
     </main>
 
 
-    <footer class="page-footer"></footer>
+    @@include('blocks/page-footer.html')
     
   </body>
 </html>
+
