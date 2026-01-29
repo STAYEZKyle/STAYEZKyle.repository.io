@@ -71,7 +71,7 @@ select {
   -webkit-box-shadow: none;
           box-shadow: none;
   outline: none;
-  color: #1f1t1t;
+  color: #1f1f1f;
   font-family: "Open Sans", sans-serif;
 }
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
@@ -133,7 +133,7 @@ textarea {
 }
 .btn:hover,
 .btn:active {
-  background-color: #1f1t1t;
+  background-color: #1f1f1f;
   color: #ffffff;
 }
 .btn--red {
@@ -161,7 +161,7 @@ textarea {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background-color: #1f1t1t;
+  background-color: #1f1f1f;
   -webkit-transition: background-color 0.2s;
   transition: background-color 0.2s;
 }
@@ -190,27 +190,35 @@ textarea {
   display: block;
   width: 100%;
   border: none;
+  height: 55px;
   border-radius: 5px;
   background-color: #ffffff;
   padding: 17px 20px 16px;
+  font-size: 16px;
+  line-height: 1.375;
 }
 .field__input {
   height: 55px;
+  padding: 0 20px;
 }
 .field__textarea {
   height: 150px;
+  padding: 20px;
 }
 .field__label {
   display: block;
   margin-bottom: 5px;
-  color: #1f1t1t;
+  color: #1f1f1f;
+  line-height: 1.3;
   font-size: 16px;
 }
 .field__title {
   display: block;
   margin-bottom: 10px;
+  margin-top: 50px;
   font-weight: 700;
   font-size: 18px;
+  line-height: 25px;
 }
 .form__list {
   display: -webkit-box;
@@ -218,14 +226,15 @@ textarea {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 0px 60px;
+  gap: 30px 60px;
+  font-size: 16px;
 }
 .form__field {
   margin: 0 0 30px;
   width: 100%;
 }
 .form__field--w50 {
-  width: calc(50%-30px);
+  width: calc(50% - 30px);
 }
 .form__title {
   display: block;
@@ -351,7 +360,7 @@ textarea {
   max-width: 1255px;
   width: 100%;
   height: 1px;
-  background-color: #1f1t1t;
+  background-color: #1f1f1f;
   pointer-events: none;
 }
 .article-card__link {
@@ -409,7 +418,7 @@ textarea {
 }
 .article-card__time {
   margin: 0 0 40px;
-  color: #1f1t1t;
+  color: #1f1f1f;
   font-size: 16px;
   font-weight: 300;
   line-height: 22px;
@@ -422,7 +431,7 @@ textarea {
   margin: auto 0 40px;
   font-weight: 600;
   font-size: 24px;
-  color: #1f1t1t;
+  color: #1f1f1f;
   text-decoration-color: transparent;
   -webkit-transition: color 0.2s, text-decoration-color 0.2s;
   transition: color 0.2s, text-decoration-color 0.2s;
@@ -550,7 +559,7 @@ textarea {
   padding: 10px 85px;
   max-width: 595px;
   width: 100%;
-  background-color: #1f1t1t;
+  background-color: #1f1f1f;
   text-transform: uppercase;
   font-weight: 400;
   font-family: "Lora", serif;
