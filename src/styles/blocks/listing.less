@@ -1,3 +1,5 @@
+@import '../global/variables.less';
+
 .listing {
     box-sizing: border-box;
     display: flex;
@@ -7,20 +9,39 @@
     margin: 0 auto;
     padding-left: 40px;
     padding-right: 40px;
+}
 
-
-    &__events-list{
+.listing__events-list {
     display: flex;
     flex-wrap: wrap;
     gap: 120px 60px;
     margin: 0 -29px -120px;
 }
 
-    &__event-card{
+.listing__event-card {
     width: calc(33.333% - 40px);
 }
-    &__event-card:nth-child(3n){
-        margin-right: 0;
-    }
 
+.listing__event-card:nth-child(3n) {
+    margin-right: 0;
+}
+
+.listing__article-list {
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+}
+
+.listing__link {
+    display: inline-block;
+    margin-top: 60px;
+    font-weight: 600;
+    font-size: 16px;
+    color: @color-black;
+    text-decoration: underline;
+    transition: color 0.2s;
+}
+
+.listing__link:hover {
+    color: @color-red;
 }

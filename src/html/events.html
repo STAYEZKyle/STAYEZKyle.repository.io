@@ -1,138 +1,106 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="ru">
   @@include('blocks/head.html')
   <body class="body">
     @@include('blocks/page-header.html')
+
     <main class="main">
         <div class="events">
-             <section class="listing events__listing">
-                <h2 class=" listing__section-title section-title">Мероприятия</h2>
+            <section class="listing events__listing">
+                <h2 class="listing__section-title section-title">Мероприятия</h2>
                 <div class="listing__events-list">
-                    <!-- prettier-ignore-->
                     @@loop('blocks/event-card.html', [
                     {
                         "class": "listing__event-card",
-                        "img": "src/assets/images/nirvana.jpg",
+                        "img": "assets/images/events/nirvana.jpeg",
                         "alt": "nirvana",
-                        "title":"Собираемся и слушаем альбом Nirvana. Nirvana",
-                        "descr":"Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.",
-                        "time":"07.12.2024 | начало 18.00",
+                        "title":"Собираемся и слушаем альбом Nirvana",
+                        "descr":"Это третий альбом группы, выпущенный после смерти Курта Кобейна.",
+                        "time":"07.12.2024 | 18.00",
                         "datetime":"2024-12-07T18:00"
                     },
                     {
                         "class": "listing__event-card",
-                        "img": "src/assets/images/howstuffworks.jpeg",
+                        "img": "assets/images/events/howstuffworks.jpeg",
                         "alt": "howstuffworks",
-                        "title":"Есть тема, нужно обсудить с HowStuffWorks",
-                        "descr":"Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи.",
-                        "time":"14.12.2024 | начало 18.30",
+                        "title":"HowStuffWorks",
+                        "descr":"Один из самых популярных подкастов в мире.",
+                        "time":"14.12.2024 | 18.30",
                         "datetime":"2024-12-14T18:30"
                     },
                     {
                         "class": "listing__event-card",
-                        "img": "src/assets/images/sade.png",
+                        "img": "assets/images/events/sade.png",
                         "alt": "sade",
-                        "title":"Вечер | The Best of Sade",
-                        "descr":"Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.",
-                        "time":"16.12.2024 | начало 20.00",
+                        "title":"The Best of Sade",
+                        "descr":"Музыка группы имеет эклектичный характер.",
+                        "time":"16.12.2024 | 20.00",
                         "datetime":"2024-12-16T20:00"
                     },
                     {
                         "class": "listing__event-card",
-                        "img": "src/assets/images/malevich.png",
+                        "img": "assets/images/events/malevich.png",
                         "alt": "malevich",
-                        "title":"Выставка Малевича в Томске",
-                        "descr":"Это будет самая полная выставка с 1988 года, того времени, когда впервые заговорили о Малевиче. Экспозиция займёт два этажа павильона.",
-                        "time":"23.12.2024 | начало 20.00",
+                        "title":"Выставка Малевича",
+                        "descr":"Самая полная выставка с 1988 года.",
+                        "time":"23.12.2024 | 20.00",
                         "datetime":"2024-12-23T20:00"
                     },
                     {
                         "class": "listing__event-card",
-                        "img": "src/assets/images/tatler.png",
+                        "img": "assets/images/events/tatler.png",
                         "alt": "tatler",
-                        "title":"Мастер — класс по студийной съемке от Tatler",
-                        "descr":"Фотографы издания расскажут, как им удается создавать потрясающие кадры и что может испортить весь процесс.",
-                        "time":"25.12.2024 | начало 13.00",
+                        "title":"Мастер-класс Tatler",
+                        "descr":"Фотографы издания расскажут о студийной съемке.",
+                        "time":"25.12.2024 | 13.00",
                         "datetime":"2024-12-25T13:00"
                     },
                     {
                         "class": "listing__event-card",
-                        "img": "src/assets/images/thehatters.png",
+                        "img": "assets/images/events/thehatters.png",
                         "alt": "thehatters",
-                        "title":"Повесилимся на славу на концерте The Hatters",
-                        "descr":"Российская джипси-фолк-рок группа, основанная в 2016 году в Санкт-Петербурге. В основной состав группы входят Юрий Музыченко.",
-                        "time":"27.12.2024 | начало 10.00",
+                        "title":"Концерт The Hatters",
+                        "descr":"Российская джипси-фолк-рок группа.",
+                        "time":"27.12.2024 | 10.00",
                         "datetime":"2024-12-27T10:00"
                     }
                     ])
-
-
                 </div>
             </section>
-        </div>
-        <article class="event">
-            <form class="reserve event__reserve">
-                <div class="reserve__checks">Чекбоксы</div>
-                <div class="reserve__scheme">Схема столов</div>
-                <div class="reserve__order">Оформление заказа</div>
-                <div class="reserve__legend">Легенда</div>
-            </form>
-        </article>
-        <div class="home">
-            <header class="main-header home__main-header">
-                <h1>АРТ-ПРОСТРАНСТВО</h1>
-                <img />
-                <p>для людей, горящих сердцем и делом
-                    место для настоящего</p>
-            </header>
 
-            <section class="offers home__offers">
-                <h4 class="offers__title">Я ХОЧУ:</h4>
-                <div class="offers__btns">
-                    <button class="offers__btn btn__2 btn--red" type="button">Провести мероприятие</button>
-                    <button class="offers__btn btn__2" type="button">Стать арендатором</button>
-                </div>
-            </section>
-            
-            <section class="about home__about">
-                <h2 class="about__section-title section-title">О нас</h2>
-                <div class="about__container"></div>
-            </section>
-            
-            <section class="upcoming home__upcoming">
-                <h2 class="upcoming__section-title section-title">Мероприятия</h2>
-                <div class="upcoming__container"></div>
-            </section>
-            
-            <section class="listing home__listing">
-                <h2 class="listing__section-title section-title">Блог</h2>
-                <div></div>
-            </section>
-            
-            <section class="contacts home__contacts">
-                <h2 class="contacts__section-title section-title">Контакты</h2>
-                <div class="contacts__container"></div>
-            </section>
-            <div class="doit"></div>
             <section class="events__services">
-                <h2 class="events__section-title section-title section-title--sub">
-                  Дополнительные услуги
-                </h2>
-                <p class="events__section-description">
-                  Перед запуском проекта, мы подготавливаем подробную смету и
-                  согласуем ее с клиентом. Убедившись, что все пожеланию учтены и мы
-                  можем приступать к реализациии проекта, начинается сложная, но
-                  интересная работа, результатом которой будет проведение вашего
-                  мероприятия на высшем уровне.
-                </p>
+                <h2 class="events__section-title section-title">Бронирование столов</h2>
+                <p class="events__section-description">Выберите свободные столы на схеме зала</p>
 
-                @@include('blocks/table.html')
+                <div class="reserve">
+                    <div class="reserve__checks">
+                        <h3>Легенда</h3>
+                        <div class="legend-item"><span class="legend-color free"></span> Свободно</div>
+                        <div class="legend-item"><span class="legend-color selected"></span> Выбрано</div>
+                        <div class="legend-item"><span class="legend-color busy"></span> Занято</div>
+                    </div>
+
+                    <div class="reserve__scheme">
+                        <div class="tables-scheme" id="tablesMap">
+                            <!-- Столы генерируются через JS -->
+                        </div>
+                    </div>
+
+                    <div class="reserve__order">
+                        <div class="order-summary">
+                            <h3>Ваш заказ</h3>
+                            <p>Столов выбрано: <strong id="tablesCount">0</strong></p>
+                            <p>Итого: <strong id="totalPrice">0 ₽</strong></p>
+                            <button class="btn btn--red" style="width: 100%; margin-top: 20px;" onclick="alert('Заказ оформлен!')">Оформить бронь</button>
+                        </div>
+                    </div>
+                </div>
             </section>
         </div>
     </main>
 
-
     @@include('blocks/page-footer.html')
     @@include('blocks/event-pp.html')
+    <script src="scripts/main.js"></script>
   </body>
 </html>

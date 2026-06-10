@@ -1,67 +1,68 @@
-.event-card{
+@import '../global/variables.less';
+
+.event-card {
     display: flex;
     width: 405px;
     max-width: 100%;
     min-width: 280px;
+}
 
+.event-card__link {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: @color-black;
+    text-decoration: none;
+}
 
-    &__link {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        color: #1f1e1e;
-        text-decoration: none;
-    }
+.event-card__link:hover .event-card__title {
+    color: @color-red;
+    text-decoration-color: @color-red;
+}
 
-    &__link:hover &__title{
-        color: #bc3324;
-        text-decoration-color: #bc3324;
-    }
+.event-card__picture {
+    display: block;
+    position: relative;
+    margin: 0 0 25px;
+    font-size: 0;
+    text-decoration: none;
+    overflow: hidden;
+}
 
-    &__picture {
-        display: block;
-        position: relative;
-        margin: 0 0 25px;
-        font-size: 0;
-        text-decoration: none;
-        overflow: hidden;
-    }
+.event-card__picture::after {
+    content: '';
+    display: block;
+    width: 100%;
+    padding-top: 107.16%;
+}
 
-    &__picture::after {
-        content: '';
-        display: block;
-        width: 100%;
-        padding-top: 107.16%;
-    }
+.event-card__img {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
-    &__img {
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+.event-card__title {
+    margin: 0 0 15px;
+    min-height: 65px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.375;
+    text-decoration: underline transparent;
+    transition: color 0.2s, text-decoration-color 0.2s;
+}
 
-    &__title {
-        margin: 0 0 15px;
-        min-height: 65px;
-        font-weight: 600;
-        font-size: 24px;
-        line-height: 1.375;
-        text-decoration: underline transparent;
-        transition: color 0.2s, text-decoration-color 0.2s;
-    }
+.event-card__description {
+    margin: 0 0 auto;
+}
 
-    &__description {
-        margin: 0 0 auto;
-    }
-
-    &__time{
-        margin: 15px 0 0;
-        font-weight: 300;
-        font-size: 14px;
-        line-height: 1.35;
-    }   
+.event-card__time {
+    margin: 15px 0 0;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.35;
 }

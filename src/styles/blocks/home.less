@@ -1,9 +1,4 @@
-.home {
-    padding: 100px 0;
-    &__listing {
-        margin-bottom: 95px;
-    }
-}
+@import '../global/variables.less';
 
 .home {
     max-width: 1414px;
@@ -11,22 +6,65 @@
     padding: 0 20px;
 }
 
-.main-header {
+.home__main-header {
+    text-align: center;
+    padding: 60px 20px 80px;
     max-width: 1334px;
-    margin: 0 auto 80px;
-    padding: 60px 20px;
+    margin: 0 auto;
+}
+
+.home__main-header h1 {
+    font-size: 64px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.home__main-header p {
+    font-size: 18px;
+    line-height: 1.5;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.home__offers {
+    max-width: 1334px;
+    margin: 0 auto 100px;
+    padding: 0 20px;
     text-align: center;
 }
 
-.offers {
-    max-width: 1334px;
-    margin: 0 auto 100px;
-    padding: 0 20px;
+.offers__title {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
+.offers__btns {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
 
-.upcoming {
-    max-width: 1334px;
-    margin: 0 auto 100px;
-    padding: 0 20px;
+.offers__btn {
+    min-width: 280px;
+}
+
+.home__about {
+    margin-bottom: 150px; // Увеличен отступ
+}
+
+.home__upcoming {
+    margin-bottom: 150px; // Увеличен отступ
+}
+
+.home__listing {
+    margin-bottom: 150px; // Увеличен отступ
+    padding-top: 50px; // Добавлен отступ сверху
+}
+
+.home__contacts {
+    margin-bottom: 150px; // Увеличен отступ
+    padding-top: 50px; // Добавлен отступ сверху
 }

@@ -1,5 +1,6 @@
-html, 
-body{
+@import 'variables.less';
+
+html, body {
     width: 100%;
     margin: 0;
     padding: 0;
@@ -10,69 +11,66 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #dedede;
-    background-image: url(../assets/images/noise.png), url(../assets/images/bg.png);
-    background-position: 0 0, 0 0;
-    background-size: auto, 100% auto;
-    background-repeat: repeat, repeat-y;
-    color: #1F1E1E;
+    background-color: @color-bg; // #DEDEDE - светло-серый
+    // Убираем тёмное bg.png, оставляем только noise для лёгкой текстуры
+    background-image: url(../assets/images/noise.png);
+    background-repeat: repeat;
+    color: @color-black;
     padding-top: 147px;
-    font-family: "Open Sans", sans-serif;
+    font-family: @font-main;
     font-size: 16px;
     font-weight: 400;
-    font-style: normal;
     line-height: 1.375;
     overflow-x: hidden;
-
 }
 
-h1 {
-    color: red;
+h1, h2, h3, h4, h5, h6 {
+    color: @color-black;
+    margin: 0;
+    font-family: @font-title;
 }
-
 
 .main {
     flex: 1 0 auto;
-    background-color: rgb(199, 199, 238);
+    background-color: transparent;
 }
 
-
 .container {
-    max-width: 1334px;
+    max-width: @content-width;
     margin: 0 auto 100px;
     padding: 0 20px;
 }
 
 a {
-  color: #1F1E1E;
-  outline: none;
+    color: @color-black;
+    outline: none;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: @color-red;
 }
 
 img {
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
-input,
-textarea,
-select{
+input, textarea, select {
     box-shadow: none;
     outline: none;
-    color: @black;
-    font-family: @font1;
+    color: #1f1f1f;
+    font-family: @font-main;
 }
-input,
-textarea{
-    &::placeholder{
-        color: #6c6c6c;
-    }
+
+input::placeholder, textarea::placeholder {
+    color: #6c6c6c;
 }
-input:focus,
-textarea:focus {
-    &::placeholder{
-        color: transparent;
-    }
+
+input:focus::placeholder, textarea:focus::placeholder {
+    color: transparent;
 }
 
 textarea {

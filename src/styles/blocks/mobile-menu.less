@@ -1,0 +1,205 @@
+@import '../global/variables.less';
+
+.mobile-menu-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 101;
+    margin-right: 20px;
+
+    span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: @color-black;
+        transition: all 0.3s ease;
+        border-radius: 2px;
+    }
+
+    &.active span:nth-child(1) { transform: rotate(45deg) translate(6px, 6px); }
+    &.active span:nth-child(2) { opacity: 0; }
+    &.active span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-btn { display: flex; }
+
+    .page-header__nav {
+        position: fixed;
+        top: 147px;
+        left: 0;
+        right: 0;
+        background: rgba(222, 222, 222, 0.98);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        padding: 40px 20px;
+        gap: 25px;
+        transform: translateY(-150%);
+        transition: transform 0.4s ease;
+        z-index: 100;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        pointer-events: none;
+        visibility: hidden;
+
+        &.mobile-menu-open {
+            transform: translateY(0);
+            pointer-events: auto;
+            visibility: visible;
+        }
+
+        .page-header__nav-link {
+            font-size: 24px;
+            text-align: center;
+        }
+    }
+
+    .page-header__right-block { display: none; }
+}
+
+// Стили для схемы столов
+.tables-scheme {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table-item {
+    position: absolute;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+
+    &.free {
+        filter: grayscale(0%);
+        opacity: 1;
+        &:hover {
+            transform: translate(-50%, -50%) scale(1.1);
+            z-index: 10;
+        }
+    }
+
+    &.selected {
+        filter: drop-shadow(0 0 8px rgba(188, 51, 36, 0.8));
+        transform: translate(-50%, -50%) scale(1.1);
+        z-index: 10;
+    }
+
+    &.busy {
+        filter: grayscale(100%) opacity(0.5);
+        cursor: not-allowed;
+    }
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.legend-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+
+    &.free { background: #dedede; }
+    &.selected { background: #bc3324; }
+    &.busy { background: #6c6c6c; }
+}
+
+.order-summary {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
+    h3 { margin-top: 0; }
+    p { margin: 10px 0; font-size: 16px; }
+}
+
+// Стили для схемы столов
+.tables-scheme {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table-item {
+    position: absolute;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+
+    &.free {
+        filter: grayscale(0%);
+        opacity: 1;
+        &:hover {
+            transform: translate(-50%, -50%) scale(1.1);
+            z-index: 10;
+        }
+    }
+
+    &.selected {
+        filter: drop-shadow(0 0 8px rgba(188, 51, 36, 0.8));
+        transform: translate(-50%, -50%) scale(1.1);
+        z-index: 10;
+    }
+
+    &.busy {
+        filter: grayscale(100%) opacity(0.5);
+        cursor: not-allowed;
+    }
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.legend-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+
+    &.free { background: #dedede; }
+    &.selected { background: #bc3324; }
+    &.busy { background: #6c6c6c; }
+}
+
+.order-summary {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
+    h3 { margin-top: 0; }
+    p { margin: 10px 0; font-size: 16px; }
+}

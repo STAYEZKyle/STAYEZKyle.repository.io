@@ -13,256 +13,139 @@
 <body class="body">
   <header class="page-header">
     <div class="page-header__container">
-      <a href="#" class="page-header__logo">
+      <a href="index.html" class="page-header__logo">
         <svg class="page-header__logo-icon" width="202" height="147">
-          <use xlink:href="assets/icons/symbols.svg#logo">
+          <use xlink:href="assets/icons/symbols.svg#logo"></use>
         </svg>
       </a>
+
+      <button class="mobile-menu-btn" type="button" aria-label="Меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
       <nav class="page-header__nav">
-        <a class="page-header__nav-link" href="#">Мероприятия</a>
-        <a class="page-header__nav-link" href="#">Блог</a>
-        <a class="page-header__nav-link" href="#">О нас</a>
-        <a class="page-header__nav-link" href="#">Контакты</a>
+        <a class="page-header__nav-link" href="events.html">Мероприятия</a>
+        <a class="page-header__nav-link" href="#blog">Блог</a>
+        <a class="page-header__nav-link" href="#about">О нас</a>
+        <a class="page-header__nav-link" href="#contacts">Контакты</a>
       </nav>
+
       <div class="page-header__right-block">
-        <a href="#" class="page-header__btn btn"> Войти </a>
+        <a href="#" class="page-header__btn btn" data-open-modal>Войти</a>
       </div>
     </div>
   </header>
+
+
   <main class="main">
     <div class="events">
       <section class="listing events__listing">
-        <h2 class=" listing__section-title section-title">Мероприятия</h2>
+        <h2 class="listing__section-title section-title">Мероприятия</h2>
         <div class="listing__events-list">
-          <!-- prettier-ignore-->
           <article class="event-card listing__event-card">
             <a href="#" class="event-card__link">
               <picture class="event-card__picture">
-                <img src="src/assets/images/nirvana.jpg" class="event-card__img" alt="nirvana" />
+                <img src="assets/images/events/nirvana.jpeg" class="event-card__img" alt="nirvana" />
               </picture>
-              <h4 class="event-card__title">Собираемся и слушаем альбом Nirvana. Nirvana</h4>
-              <p class="event-card__description">Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.</p>
-              <time datetime="2024-12-07T18:00" class="event-card__time">07.12.2024 | начало 18.00</time>
+              <h4 class="event-card__title">Собираемся и слушаем альбом Nirvana</h4>
+              <p class="event-card__description">Это третий альбом группы, выпущенный после смерти Курта Кобейна.</p>
+              <time datetime="2024-12-07T18:00" class="event-card__time">07.12.2024 | 18.00</time>
             </a>
           </article>
           <article class="event-card listing__event-card">
             <a href="#" class="event-card__link">
               <picture class="event-card__picture">
-                <img src="src/assets/images/howstuffworks.jpeg" class="event-card__img" alt="howstuffworks" />
+                <img src="assets/images/events/howstuffworks.jpeg" class="event-card__img" alt="howstuffworks" />
               </picture>
-              <h4 class="event-card__title">Есть тема, нужно обсудить с HowStuffWorks</h4>
-              <p class="event-card__description">Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи.</p>
-              <time datetime="2024-12-14T18:30" class="event-card__time">14.12.2024 | начало 18.30</time>
+              <h4 class="event-card__title">HowStuffWorks</h4>
+              <p class="event-card__description">Один из самых популярных подкастов в мире.</p>
+              <time datetime="2024-12-14T18:30" class="event-card__time">14.12.2024 | 18.30</time>
             </a>
           </article>
           <article class="event-card listing__event-card">
             <a href="#" class="event-card__link">
               <picture class="event-card__picture">
-                <img src="src/assets/images/sade.png" class="event-card__img" alt="sade" />
+                <img src="assets/images/events/sade.png" class="event-card__img" alt="sade" />
               </picture>
-              <h4 class="event-card__title">Вечер | The Best of Sade</h4>
-              <p class="event-card__description">Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.</p>
-              <time datetime="2024-12-16T20:00" class="event-card__time">16.12.2024 | начало 20.00</time>
+              <h4 class="event-card__title">The Best of Sade</h4>
+              <p class="event-card__description">Музыка группы имеет эклектичный характер.</p>
+              <time datetime="2024-12-16T20:00" class="event-card__time">16.12.2024 | 20.00</time>
             </a>
           </article>
           <article class="event-card listing__event-card">
             <a href="#" class="event-card__link">
               <picture class="event-card__picture">
-                <img src="src/assets/images/malevich.png" class="event-card__img" alt="malevich" />
+                <img src="assets/images/events/malevich.png" class="event-card__img" alt="malevich" />
               </picture>
-              <h4 class="event-card__title">Выставка Малевича в Томске</h4>
-              <p class="event-card__description">Это будет самая полная выставка с 1988 года, того времени, когда впервые заговорили о Малевиче. Экспозиция займёт два этажа павильона.</p>
-              <time datetime="2024-12-23T20:00" class="event-card__time">23.12.2024 | начало 20.00</time>
+              <h4 class="event-card__title">Выставка Малевича</h4>
+              <p class="event-card__description">Самая полная выставка с 1988 года.</p>
+              <time datetime="2024-12-23T20:00" class="event-card__time">23.12.2024 | 20.00</time>
             </a>
           </article>
           <article class="event-card listing__event-card">
             <a href="#" class="event-card__link">
               <picture class="event-card__picture">
-                <img src="src/assets/images/tatler.png" class="event-card__img" alt="tatler" />
+                <img src="assets/images/events/tatler.png" class="event-card__img" alt="tatler" />
               </picture>
-              <h4 class="event-card__title">Мастер — класс по студийной съемке от Tatler</h4>
-              <p class="event-card__description">Фотографы издания расскажут, как им удается создавать потрясающие кадры и что может испортить весь процесс.</p>
-              <time datetime="2024-12-25T13:00" class="event-card__time">25.12.2024 | начало 13.00</time>
+              <h4 class="event-card__title">Мастер-класс Tatler</h4>
+              <p class="event-card__description">Фотографы издания расскажут о студийной съемке.</p>
+              <time datetime="2024-12-25T13:00" class="event-card__time">25.12.2024 | 13.00</time>
             </a>
           </article>
           <article class="event-card listing__event-card">
             <a href="#" class="event-card__link">
               <picture class="event-card__picture">
-                <img src="src/assets/images/thehatters.png" class="event-card__img" alt="thehatters" />
+                <img src="assets/images/events/thehatters.png" class="event-card__img" alt="thehatters" />
               </picture>
-              <h4 class="event-card__title">Повесилимся на славу на концерте The Hatters</h4>
-              <p class="event-card__description">Российская джипси-фолк-рок группа, основанная в 2016 году в Санкт-Петербурге. В основной состав группы входят Юрий Музыченко.</p>
-              <time datetime="2024-12-27T10:00" class="event-card__time">27.12.2024 | начало 10.00</time>
+              <h4 class="event-card__title">Концерт The Hatters</h4>
+              <p class="event-card__description">Российская джипси-фолк-рок группа.</p>
+              <time datetime="2024-12-27T10:00" class="event-card__time">27.12.2024 | 10.00</time>
             </a>
           </article>
-
-
 
         </div>
       </section>
-    </div>
-    <article class="event">
-      <form class="reserve event__reserve">
-        <div class="reserve__checks">Чекбоксы</div>
-        <div class="reserve__scheme">Схема столов</div>
-        <div class="reserve__order">Оформление заказа</div>
-        <div class="reserve__legend">Легенда</div>
-      </form>
-    </article>
-    <div class="home">
-      <header class="main-header home__main-header">
-        <h1>АРТ-ПРОСТРАНСТВО</h1>
-        <img />
-        <p>для людей, горящих сердцем и делом
-          место для настоящего</p>
-      </header>
 
-      <section class="offers home__offers">
-        <h4 class="offers__title">Я ХОЧУ:</h4>
-        <div class="offers__btns">
-          <button class="offers__btn btn__2 btn--red" type="button">Провести мероприятие</button>
-          <button class="offers__btn btn__2" type="button">Стать арендатором</button>
-        </div>
-      </section>
-
-      <section class="about home__about">
-        <h2 class="about__section-title section-title">О нас</h2>
-        <div class="about__container"></div>
-      </section>
-
-      <section class="upcoming home__upcoming">
-        <h2 class="upcoming__section-title section-title">Мероприятия</h2>
-        <div class="upcoming__container"></div>
-      </section>
-
-      <section class="listing home__listing">
-        <h2 class="listing__section-title section-title">Блог</h2>
-        <div></div>
-      </section>
-
-      <section class="contacts home__contacts">
-        <h2 class="contacts__section-title section-title">Контакты</h2>
-        <div class="contacts__container"></div>
-      </section>
-      <div class="doit"></div>
       <section class="events__services">
-        <h2 class="events__section-title section-title section-title--sub">
-          Дополнительные услуги
-        </h2>
-        <p class="events__section-description">
-          Перед запуском проекта, мы подготавливаем подробную смету и
-          согласуем ее с клиентом. Убедившись, что все пожеланию учтены и мы
-          можем приступать к реализациии проекта, начинается сложная, но
-          интересная работа, результатом которой будет проведение вашего
-          мероприятия на высшем уровне.
-        </p>
+        <h2 class="events__section-title section-title">Бронирование столов</h2>
+        <p class="events__section-description">Выберите свободные столы на схеме зала</p>
 
-        <table class="events__tariffs-table  table">
-          <thead class="table__head">
-            <tr class="table__head-tr">
-              <th class="table__th"></th>
-              <th class="table__th">Тариф «Light»</th>
-              <th class="table__th">Тариф «Promo»</th>
-              <th class="table__th">Тариф «All stars»</th>
-            </tr>
-          </thead>
-          <tbody class="table__body">
-            <tr class="table__tr">
-              <th class="table__body-th">Стоимость за час</th>
-              <td class="table__td">1 000 ₽</td>
-              <td class="table__td">3 000 ₽</td>
-              <td class="table__td">3 000 ₽</td>
-            </tr>
-            <tr class="table__tr">
-              <th class="table__body-th">Ведущий мероприятия</th>
-              <td class="table__td"></td>
-              <td class="table__td">
-                <span class="ok"></span>
-              </td>
-              <td class="table__td">
-                <span class="ok"></span>
-              </td>
-            </tr>
-            <tr class="table__tr">
-              <th class="table__body-th">Фотосъемка</th>
-              <td class="table__td">
-                <span class="ok"></span>
-              </td>
-              <td class="table__td">
-                <span class="ok"></span>
-              </td>
-              <td class="table__td">
-                <span class="ok"></span>
-              </td>
-            </tr>
-            <tr class="table__tr">
-              <th class="table__body-th">Видеосъемка</th>
-              <td class="table__td"></td>
-              <td class="table__td"></td>
-              <td class="table__td">
-                <span class="ok"></span>
-              </td>
-            </tr>
-            <tr class="table__tr">
-              <th class="table__body-th">Организация питания</th>
-              <td class="table__td"></td>
-              <td class="table__td">
-                <span class="ok"></span>
-              </td>
-              <td class="table__td">
-                <span class="ok"></span>
-              </td>
-            </tr>
-            <tr class="table__tr">
-              <th class="table__body-th">Декор</th>
-              <td class="table__td"></td>
-              <td class="table__td"></td>
-              <td class="table__td">
-                <span class="ok"></span>
-              </td>
-            </tr>
-            <tr class="table__tr">
-              <th class="table__body-th">Звуковое сопровождение</th>
-              <td class="table__td"></td>
-              <td class="table__td">
-                <span class="ok"></span>
-              </td>
-              <td class="table__td">
-                <span class="ok"></span>
-              </td>
-            </tr>
-            <tr class="table__tr">
-              <th class="table__body-th">Дополнительное освещение</th>
-              <td class="table__td"></td>
-              <td class="table__td"></td>
-              <td class="table__td">
-                <span class="ok"></span>
-              </td>
-            </tr>
+        <div class="reserve">
+          <div class="reserve__checks">
+            <h3>Легенда</h3>
+            <div class="legend-item">
+              <span class="legend-color free"></span> Свободно
+            </div>
+            <div class="legend-item">
+              <span class="legend-color selected"></span> Выбрано
+            </div>
+            <div class="legend-item">
+              <span class="legend-color busy"></span> Занято
+            </div>
+          </div>
 
-            <tr class="table__tr">
-              <th class="table__body-th">Клининг</th>
-              <td class="table__td"></td>
-              <td class="table__td"></td>
-              <td class="table__td">
-                <span class="ok"></span>
-              </td>
-            </tr>
-          </tbody>
+          <div class="reserve__scheme">
+            <div class="tables-scheme" id="tablesMap">
+              <!-- Столы генерируются через JS -->
+            </div>
+          </div>
 
-          <tfoot class="table__footer">
-            <tr class="table__footer-tr">
-              <th class="table__footer-th"></th>
-              <th class="table__footer-th">Тариф «Light»</th>
-              <th class="table__footer-th">Тариф «Promo»</th>
-              <th class="table__footer-th">Тариф «All stars»</th>
-            </tr>
-          </tfoot>
-        </table>
+          <div class="reserve__order">
+            <div class="order-summary">
+              <h3>Ваш заказ</h3>
+              <p>Столов выбрано: <strong id="tablesCount">0</strong>
+              </p>
+              <p>Итого: <strong id="totalPrice">0 ₽</strong>
+              </p>
+              <button class="btn btn--red" style="width: 100%; margin-top: 20px;" onclick="alert('Заказ оформлен!')">Оформить бронь</button>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
   </main>
-
 
   <footer class="page-footer"></footer>
   <div class="pp" id="eventPP">
@@ -395,6 +278,7 @@
       </div>
     </div>
   </div>
+  <script src="scripts/main.js"></script>
 </body>
 
 </html>
